@@ -1,7 +1,503 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>¡Hola Mundo desde GitHub Pages!</h1>
-    <p>Esta es mi primera página web oficial.</p>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KENKO Wellness Resort | Bienestar Integral en Málaga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="static/images/logo_empresa.png" alt="KENKO Wellness Resort">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Inicio</a></li>
+                <li><a href="#proyecto">El Proyecto</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#mercado">Mercado</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <img src="static/images/proyecto.png" alt="KENKO Wellness Resort - Vista general" class="hero-bg-image">
+        <div class="container">
+            <div class="hero-content">
+                <div class="kenko-japanese">KENKŌ · 健康</div>
+                <h1>Sentir el potencial de la vida</h1>
+                <p>Un espacio dedicado a tu bienestar físico, emocional y mental donde disfrutar de unas vacaciones de salud en un enclave natural único en Málaga.</p>
+                <a href="#contacto" class="btn">Reserva tu experiencia</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyecto">
+        <div class="container">
+            <div class="section-title">
+                <h2>El Proyecto</h2>
+                <p>KENKO: salud en japonés · Un resort médico y de bienestar integral</p>
+            </div>
+            <div class="proyecto-grid">
+                <div class="proyecto-texto" id="proyecto-texto">
+                    <h3>Un oasis en las montañas de Málaga</h3>
+                    <p>KENKO Wellness Resort es un espacio dedicado a tu bienestar físico, emocional y mental. El complejo constará de un edificio central y varios edificios habitacionales con un total de 55 habitaciones, en una finca de 150.000 m² con una edificabilidad de 7.000 m².</p>
+                    <p>Nuestro objetivo es brindar una atención personalizada y holística, combinando lo mejor de la medicina convencional con terapias complementarias de nueva generación. Contamos con un equipo multidisciplinar de profesionales comprometidos con el cuidado de nuestros huéspedes.</p>
+                    <p>Ubicado en un antiguo hotel construido sobre un cortijo andaluz de principios del siglo XX, rehabilitamos y ampliamos edificios existentes y construimos otros de nueva creación, todo rodeado de 77 hectáreas con manantiales propios, olivos y vistas increíbles al mar Mediterráneo.</p>
+                </div>
+                <div class="proyecto-imagen" id="proyecto-imagen">
+                    <img src="static/images/proyecto.png" alt="Vista del resort - Instalaciones principales">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nuestras Instalaciones</h2>
+            <p>Espacios diseñados para tu bienestar y relax</p>
+        </div>
+        <div class="galeria-grid">
+            <div class="galeria-item galeria-item-large" id="galeria1">
+                <img src="static/images/RELAXATION SPA.jpg" alt="Spa y área de hidroterapia">
+                <div class="galeria-overlay">
+                    <h3>Spa & Hidroterapia</h3>
+                    <p>Piscinas termales y circuitos de agua</p>
+                </div>
+            </div>
+            <div class="galeria-item" id="galeria2">
+                <img src="static/images/Bedroom.png" alt="Habitación del resort">
+                <div class="galeria-overlay">
+                    <h3>Habitaciones</h3>
+                    <p>Espacios de descanso con vistas</p>
+                </div>
+            </div>
+            <div class="galeria-item" id="galeria3">
+                <img src="static/images/SHALA.jpg" alt="Zona de yoga y meditación">
+                <div class="galeria-overlay">
+                    <h3>Yoga & Meditación</h3>
+                    <p>Espacios al aire libre</p>
+                </div>
+            </div>
+            <div class="galeria-item" id="galeria4">
+                <img src="static/images/F&B OUTDOOR.jpg" alt="Restaurante saludable">
+                <div class="galeria-overlay">
+                    <h3>Gastronomía</h3>
+                    <p>Cocina saludable y ecológica</p>
+                </div>
+            </div>
+            <div class="galeria-item" id="galeria5">
+                <img src="static/images/Spa_Night.jpg" alt="Piscina exterior">
+                <div class="galeria-overlay">
+                    <h3>Piscina exterior</h3>
+                    <p>Entorno natural privilegiado</p>
+                </div>
+            </div>
+            <div class="galeria-item" id="galeria6">
+                <img src="static/images/LOBBY.jpg" alt="Zonas de descanso">
+                <div class="galeria-overlay">
+                    <h3>Zonas de descanso</h3>
+                    <p>Amplios espacios llenos de comodidad y tranquilidad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item" id="feature1">
+                    <i class="fas fa-water"></i>
+                    <h3>Manantiales propios</h3>
+                    <p>Agua de manantial en nuestras 77 hectáreas, la base de nuestros tratamientos de hidroterapia.</p>
+                </div>
+                <div class="feature-item" id="feature2">
+                    <i class="fas fa-tree"></i>
+                    <h3>Entorno natural</h3>
+                    <p>Olivares centenarios y bosques mediterráneos con vistas al mar.</p>
+                </div>
+                <div class="feature-item" id="feature3">
+                    <i class="fas fa-spa"></i>
+                    <h3>Medicina integrativa</h3>
+                    <p>Combinamos lo mejor de la medicina convencional con terapias complementarias.</p>
+                </div>
+                <div class="feature-item" id="feature4">
+                    <i class="fas fa-clock"></i>
+                    <h3>A 15 minutos</h3>
+                    <p>12 km del centro de Málaga, fácilmente accesible pero en plena naturaleza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Programas de Bienestar</h2>
+                <p>Planes de tratamiento diseñados para tu transformación integral</p>
+            </div>
+            <div class="programas-grid">
+                <div class="programa-card" id="prog1">
+                    <div class="programa-icon">💎</div>
+                    <h3>Diamante</h3>
+                    <div class="programa-subtitle">Rejuvenecimiento y bienestar</div>
+                    <p>Plan de tratamiento para ralentizar y revertir el envejecimiento prematuro mediante reactivación metabólica, medicina integrativa y nutrición antiedad.</p>
+                    <ul class="programa-features">
+                        <li><i class="fas fa-circle"></i> Estudio genético personalizado</li>
+                        <li><i class="fas fa-circle"></i> Terapias estéticas avanzadas</li>
+                        <li><i class="fas fa-circle"></i> Prevención de enfermedades</li>
+                    </ul>
+                </div>
+                <div class="programa-card" id="prog2">
+                    <div class="programa-icon">🌿</div>
+                    <h3>Depura</h3>
+                    <div class="programa-subtitle">Detoxificación y peso saludable</div>
+                    <p>Limpieza profunda del organismo, eliminación de toxinas y metales pesados para revitalizar el metabolismo y alcanzar el peso ideal.</p>
+                    <ul class="programa-features">
+                        <li><i class="fas fa-circle"></i> Eliminación de toxinas</li>
+                        <li><i class="fas fa-circle"></i> Reeducación alimenticia</li>
+                        <li><i class="fas fa-circle"></i> Pérdida de peso saludable</li>
+                    </ul>
+                </div>
+                <div class="programa-card" id="prog3">
+                    <div class="programa-icon">⚡</div>
+                    <h3>Recover</h3>
+                    <div class="programa-subtitle">Recuperación física y mental</div>
+                    <p>Diseñado para quienes sufren estrés o agotamiento, recuperando el equilibrio cuerpo-mente y aumentando la energía vital.</p>
+                    <ul class="programa-features">
+                        <li><i class="fas fa-circle"></i> Gestión del estrés</li>
+                        <li><i class="fas fa-circle"></i> Reequilibrio emocional</li>
+                        <li><i class="fas fa-circle"></i> Aumento del rendimiento</li>
+                    </ul>
+                </div>
+                <div class="programa-card" id="prog4">
+                    <div class="programa-icon">🔋</div>
+                    <h3>Vitalidad</h3>
+                    <div class="programa-subtitle">Recuperación de la energía vital</div>
+                    <p>Para personas agotadas o desvitalizadas, restaurando la energía mediante hábitos saludables y tratamientos holísticos.</p>
+                    <ul class="programa-features">
+                        <li><i class="fas fa-circle"></i> Restauración energética</li>
+                        <li><i class="fas fa-circle"></i> Detección de hábitos negativos</li>
+                        <li><i class="fas fa-circle"></i> Reeducación integral</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mercado">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mercado & Oportunidad</h2>
+                <p>Datos clave del sector turístico y de bienestar</p>
+            </div>
+            <div class="mercado-stats">
+                <div class="stat-item" id="stat1">
+                    <div class="stat-number">2,8M</div>
+                    <div class="stat-label">pasajeros/mes Aeropuerto Málaga (jul 2025)</div>
+                </div>
+                <div class="stat-item" id="stat2">
+                    <div class="stat-number">2°</div>
+                    <div class="stat-label">país más visitado del mundo</div>
+                </div>
+                <div class="stat-item" id="stat3">
+                    <div class="stat-number">295B$</div>
+                    <div class="stat-label">mercado global ecoturismo 2025</div>
+                </div>
+                <div class="stat-item" id="stat4">
+                    <div class="stat-number">19,4%</div>
+                    <div class="stat-label">crecimiento turismo Málaga 2025</div>
+                </div>
+                <div class="stat-item" id="stat5">
+                    <div class="stat-number">42%</div>
+                    <div class="stat-label">subida precios hoteles vs 2019</div>
+                </div>
+                <div class="stat-item" id="stat6">
+                    <div class="stat-number">8,2%</div>
+                    <div class="stat-label">CAGR turismo de lujo hasta 2030</div>
+                </div>
+                <div class="stat-item" id="stat7">
+                    <div class="stat-number">1300</div>
+                    <div class="stat-label">plazas 5* en Málaga capital</div>
+                </div>
+                <div class="stat-item" id="stat8">
+                    <div class="stat-number">5,6B$</div>
+                    <div class="stat-label">mercado salud y bienestar 2023</div>
+                </div>
+                <div class="stat-item" id="stat9">
+                    <div class="stat-number">15-20%</div>
+                    <div class="stat-label">turismo de montaña mundial</div>
+                </div>
+            </div>
+            <div class="mercado-destacado" id="mercado-destacado">
+                <p>Málaga se consolida como destino de excelencia con crecimiento récord y alta demanda internacional. KENKO se ubicará estratégicamente a solo 15-20 minutos del centro de la capital, en un enclave natural privilegiado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Comienza tu viaje hacia el bienestar integral</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" id="contact-info">
+                    <h3>Ven a conocernos</h3>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">Estamos en las montañas que rodean Málaga Capital, a solo 12 km (15-20 minutos) del centro de la ciudad.</p>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Carretera de las Montañas, km 5 · 29004 Málaga, España</div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>+34 952 000 000</div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>info@kenkowellness.com</div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>Lunes a viernes 9:00 - 19:00 · Sábados 10:00 - 14:00</div>
+                    </div>
+                </div>
+                <div class="contact-form" id="contact-form">
+                    <h3 style="color: var(--primary-dark);">Solicita información</h3>
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <img src="static/images/logo_empresa.png" alt="KENKO Wellness Resort">
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7);">Salud en japonés. Un concepto de resort médico y de bienestar integral que combina medicina convencional, terapias complementarias y un enfoque holístico del cuidado de la salud.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#proyecto">El Proyecto</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#programas">Programas</a></li>
+                        <li><a href="#mercado">Mercado</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;">Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 KENKO Wellness Resort. Todos los derechos reservados. Proyecto en desarrollo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const header = document.getElementById('header');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation
+        document.querySelectorAll('.programa-card, .feature-item, .stat-item, .mercado-destacado, .contact-info, .contact-form, #proyecto-texto, #proyecto-imagen').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        const form = document.getElementById('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.textContent;
+            
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Gracias por tu interés. Te contactaremos pronto.');
+                form.reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1500);
+        });
+
+        // Active navigation highlight
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id') || '';
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    
+        // Lightbox functionality
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img src="" alt="">
+                <div class="lightbox-caption"></div>
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const galeriaItems = document.querySelectorAll('.galeria-item');
+        let currentIndex = 0;
+
+        galeriaItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                showLightbox(index);
+            });
+        });
+
+        function showLightbox(index) {
+            const img = galeriaItems[index].querySelector('img');
+            const title = galeriaItems[index].querySelector('.galeria-overlay h3').textContent;
+            const description = galeriaItems[index].querySelector('.galeria-overlay p').textContent;
+            
+            lightbox.classList.add('active');
+            lightbox.querySelector('img').src = img.src;
+            lightbox.querySelector('.lightbox-caption').textContent = `${title} - ${description}`;
+        }
+
+        // Close lightbox
+        document.querySelector('.lightbox-close').addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        // Navigation
+        document.querySelector('.lightbox-prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galeriaItems.length) % galeriaItems.length;
+            showLightbox(currentIndex);
+        });
+
+        document.querySelector('.lightbox-next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galeriaItems.length;
+            showLightbox(currentIndex);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            } else if (e.key === 'ArrowLeft') {
+                document.querySelector('.lightbox-prev').click();
+            } else if (e.key === 'ArrowRight') {
+                document.querySelector('.lightbox-next').click();
+            }
+        });
+
+        // Añadir las imágenes de la galería al observer
+        document.querySelectorAll('.galeria-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
