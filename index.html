@@ -7,6 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        /* Estilos adicionales para el video de fondo */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        /* Overlay para mejorar la legibilidad del texto sobre el video */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-bg-image {
+            display: none; /* Ocultamos la imagen de fondo anterior */
+        }
+        /* Ajuste responsive para el video */
+        @media (max-width: 768px) {
+            .hero .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -31,6 +73,12 @@
     </header>
 
     <section class="hero" id="home">
+        <!-- Video de fondo -->
+        <video autoplay muted loop playsinline class="hero-bg-video">
+            <source src="static/videos/kenko_background.mp4" type="video/mp4">
+            <!-- Fallback en caso de que el video no cargue -->
+            Tu navegador no soporta videos HTML5.
+        </video>
         <img src="static/images/proyecto.png" alt="KENKO Wellness Resort - Vista general" class="hero-bg-image">
         <div class="container">
             <div class="hero-content">
@@ -487,7 +535,7 @@
                 </div>
                 <div class="contact-form" id="contact-form">
                     <h3 style="color: var(--primary-dark);">Solicita información</h3>
-                    <form id="form">
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Nombre completo</label>
                             <input type="text" id="name" class="form-control" required>
@@ -549,6 +597,10 @@
     </footer>
 
     <script>
+        // Inicializar EmailJS con tu Public Key
+        // IMPORTANTE: Reemplaza 'TU_USER_ID' con tu Public Key de EmailJS
+        emailjs.init("TU_USER_ID"); // <-- Debes cambiar esto por tu clave pública de EmailJS
+
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
@@ -594,27 +646,47 @@
             });
         }, observerOptions);
 
-        // Observe all elements with animation (incluyendo los nuevos)
+        // Observe all elements with animation
         document.querySelectorAll('.programa-card, .feature-item, .stat-item, .mercado-destacado, .contact-info, .contact-form, #proyecto-texto, #proyecto-imagen, .galeria-item, .team-member, .servicio-categoria').forEach(el => {
             observer.observe(el);
         });
 
-        // Form submission
-        const form = document.getElementById('form');
-        form.addEventListener('submit', (e) => {
+        // Form submission con EmailJS
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = form.querySelector('button');
+            const btn = contactForm.querySelector('button');
             const originalText = btn.textContent;
+            
+            // Preparar datos para EmailJS
+            // IMPORTANTE: Debes crear un template en EmailJS con las variables: nombre, email, telefono, mensaje
+            // y reemplazar 'TU_SERVICE_ID' y 'TU_TEMPLATE_ID' con los tuyos.
+            const templateParams = {
+                nombre: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                telefono: document.getElementById('phone').value,
+                mensaje: document.getElementById('message').value,
+                to_email: 'info@kenkowellness.com' // Puedes configurar esto en el template o pasarlo como parámetro
+            };
             
             btn.textContent = 'Enviando...';
             btn.disabled = true;
             
-            setTimeout(() => {
-                alert('Gracias por tu interés. Te contactaremos pronto.');
-                form.reset();
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 1500);
+            // Reemplaza 'TU_SERVICE_ID' y 'TU_TEMPLATE_ID' con tus IDs de EmailJS
+            emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('¡Gracias por tu interés! Te contactaremos pronto a la dirección de correo proporcionada.');
+                    contactForm.reset();
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde o contáctanos por teléfono.');
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                });
         });
 
         // Active navigation highlight
